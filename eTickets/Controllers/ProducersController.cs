@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace eTickets.Controllers
 {
-    public class ProducerController : Controller
+    public class ProducersController : Controller
     {
         private readonly AppDbContext _context;
-        public ProducerController(AppDbContext context)
+        public ProducersController(AppDbContext context)
         {
             _context = context;
         }

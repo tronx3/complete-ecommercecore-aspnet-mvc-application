@@ -138,15 +138,27 @@ namespace eTickets.Data
                     {
                         new Movie()
                         {
-                            Name = "Scoob",
-                            Description = "This is the Scoob movie description",
+                            Name = "Life",
+                            Description = "This is the Life movie description",
                             Price = 39.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
+                            ImageURL = "http://dotnethow.net/images/movies/movie-3.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
-                            EndDate = DateTime.Now.AddDays(-2),
-                            CinemaId= 1,
+                            EndDate = DateTime.Now.AddDays(10),
+                            CinemaId = 3,
                             ProducerId = 3,
-                            MovieCategory = MovieCategory.Cartoon
+                            MovieCategory = MovieCategory.Documentary
+                        },
+                        new Movie()
+                        {
+                            Name = "The Shawshank Redemption",
+                            Description = "This is the Shawshank Redemption description",
+                            Price = 29.50,
+                            ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
+                            StartDate = DateTime.Now,
+                            EndDate = DateTime.Now.AddDays(3),
+                            CinemaId = 1,
+                            ProducerId = 1,
+                            MovieCategory = MovieCategory.Action
                         },
                         new Movie()
                         {
@@ -156,21 +168,45 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-4.jpeg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(7),
-                            CinemaId= 4,
+                            CinemaId = 4,
                             ProducerId = 4,
                             MovieCategory = MovieCategory.Horror
                         },
                         new Movie()
                         {
-                            Name = "Rice",
-                            Description = "This is the Rice movie description",
+                            Name = "Race",
+                            Description = "This is the Race movie description",
+                            Price = 39.50,
+                            ImageURL = "http://dotnethow.net/images/movies/movie-6.jpeg",
+                            StartDate = DateTime.Now.AddDays(-10),
+                            EndDate = DateTime.Now.AddDays(-5),
+                            CinemaId = 1,
+                            ProducerId = 2,
+                            MovieCategory = MovieCategory.Documentary
+                        },
+                        new Movie()
+                        {
+                            Name = "Scoob",
+                            Description = "This is the Scoob movie description",
                             Price = 39.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
-                            EndDate = DateTime.Now.AddDays(-5),
-                            CinemaId= 1,
-                            ProducerId = 2,
-                            MovieCategory = MovieCategory.Documentary
+                            EndDate = DateTime.Now.AddDays(-2),
+                            CinemaId = 1,
+                            ProducerId = 3,
+                            MovieCategory = MovieCategory.Cartoon
+                        },
+                        new Movie()
+                        {
+                            Name = "Cold Soles",
+                            Description = "This is the Cold Soles movie description",
+                            Price = 39.50,
+                            ImageURL = "http://dotnethow.net/images/movies/movie-8.jpeg",
+                            StartDate = DateTime.Now.AddDays(3),
+                            EndDate = DateTime.Now.AddDays(20),
+                            CinemaId = 1,
+                            ProducerId = 5,
+                            MovieCategory = MovieCategory.Drama
                         }
                     });
                     context.SaveChanges();
@@ -180,31 +216,99 @@ namespace eTickets.Data
                 {
                     context.Actors_Movies.AddRange(new List<Actor_Movie>()
                     {
-                        new Actor_Movie()
+                         new Actor_Movie()
                         {
-                            ActorId=1,
-                            MovieId=3
+                            ActorId = 1,
+                            MovieId = 1
                         },
                         new Actor_Movie()
                         {
-                            ActorId=2,
-                            MovieId=3
+                            ActorId = 3,
+                            MovieId = 1
+                        },
+
+                         new Actor_Movie()
+                        {
+                            ActorId = 1,
+                            MovieId = 2
+                        },
+                         new Actor_Movie()
+                        {
+                            ActorId = 4,
+                            MovieId = 2
+                        },
+
+                        new Actor_Movie()
+                        {
+                            ActorId = 1,
+                            MovieId = 3
                         },
                         new Actor_Movie()
                         {
-                            ActorId=5,
-                            MovieId=3
+                            ActorId = 2,
+                            MovieId = 3
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 5,
+                            MovieId = 3
+                        },
+
+
+                        new Actor_Movie()
+                        {
+                            ActorId = 2,
+                            MovieId = 4
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 3,
+                            MovieId = 4
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 4,
+                            MovieId = 4
+                        },
+
+
+                        new Actor_Movie()
+                        {
+                            ActorId = 2,
+                            MovieId = 5
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 3,
+                            MovieId = 5
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 4,
+                            MovieId = 5
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 5,
+                            MovieId = 5
+                        },
+
+
+                        new Actor_Movie()
+                        {
+                            ActorId = 3,
+                            MovieId = 6
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 4,
+                            MovieId = 6
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 5,
+                            MovieId = 6
                         }
-                        //new Actor_Movie()
-                        //{
-                        //    ActorId=2,
-                        //    MovieId=4
-                        //},
-                        //new Actor_Movie()
-                        //{
-                        //    ActorId=5,
-                        //    MovieId=5
-                        //}
 
                     });
                     context.SaveChanges();

@@ -21,5 +21,11 @@ namespace eTickets.Controllers
             var data = await _service.GetAll(); // de esta manera se trae todos los actores de la BD, // ahora se maneja una capa de servicios
             return View(data);
         }
+
+        //Get: Actors/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
